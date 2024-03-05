@@ -1,0 +1,845 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body{
+    background: #141414 !important;
+    font-family: "Courgette", cursive !important;
+    font-weight: 400 !important;
+}
+
+.immagine-destra {
+    background: url(https://www.pngkey.com/png/full/415-4154120_momo-anime-girl-hot-pink-hair.png);
+    height: 750px;
+    width: 390px;
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    background-size: cover;
+    opacity: 0.10;
+    z-index: -5;
+}
+
+a{
+    color: #8d8d8d !important;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+.header{
+    background-color: #1a1a1a;
+    border-bottom: 1px solid #1f1f1f;
+}
+.navbar{
+    background-color: #1a1a1a;
+    border-radius: 0 0 5px 5px;
+    color: white;
+}
+
+.navbar-nav .dropdown-menu{
+    background-color: #1a1a1a;
+    border: none;
+}
+
+.dropdown-item{
+    color: white !important;
+    background-color: #1a1a1a !important;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: white !important;
+}
+.logo-image{
+    width: 60px;
+    height: 50px;
+    overflow: hidden;
+    margin-top: 4px;
+}
+
+.img-fluid{
+    width: 60px !important;
+    height: 50px !important;
+}
+
+.form-control{
+    border: 0 solid #303941 !important;
+    background-color: #ffffff !important;
+    width: 210px;
+    padding: 8px 30px 9px 10px;
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    border-radius: 16px !important;
+    margin-right: 20px;
+    color: #151515 !important;
+    padding-left: 15px;
+}
+
+
+.carousel .carousel-item {
+    height: 400px;
+}
+
+.w-100 {
+    width: 100%!important;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+.h5, h5 {
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 6px #000000;
+}
+
+.p{
+    color: white;
+    text-shadow: 1px 1px 6px #000000;
+}
+
+.d-md-block{
+    background: rgba(31, 31, 31, 0.75);
+    border-radius: 40px;
+}
+/*
+.custom-login-btn {
+    background-color: #171c2c !important;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #4f0000 !important;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 8px;
+} */
+
+.custom-login-btn:hover {
+    background-color: #171c2c; !important
+}
+
+/*.search-button {
+    display: block;
+    width: 30px;
+    height: 25px;
+    position: absolute;
+    right: 180px;
+    top: 25px;
+    background: url(https://animeru.org/templates/animeru/dleimages/poiskkla.png) 6px 6px no-repeat;
+    overflow: hidden;
+    padding: 28px 0 0;
+    box-shadow: none;
+    white-space: nowrap;
+    text-indent: -999em;
+    border-radius: 0;
+    cursor: pointer;
+    opacity: .7;
+} */
+
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 1rem !important;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * var(--bs-gutter-y));
+    margin-right: calc(-.5 * var(--bs-gutter-x));
+    margin-left: calc(-.5 * var(--bs-gutter-x));
+}
+
+.card {
+    border: none !important;
+    border-radius: 30px !important;
+    overflow: hidden;
+    position: relative; /* Adăugăm position: relative pentru a poziționa absolut .card-title */
+    cursor: pointer;
+}
+
+.card:hover {
+    background-color: rgba(0, 0, 0, 0.5); /* La hover, facem fundalul negru transparent */
+}
+
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Culorează întreaga carte la hover */
+    opacity: 0; /* Inițial, suprapunerea este invizibilă */
+    transition: opacity 0.3s; /* Adăugăm o tranziție pentru afișarea treptată */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card:hover .card-overlay {
+    opacity: 1; /* La hover, facem suprapunerea vizibilă */
+}
+
+.play-button {
+    background-color: #ff5656; /* Culoarea butonului de play */
+    color: white;
+    border: none;
+    padding: 15px 23px;
+    border-radius: 50%; /* Forma butonului circular */
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Adăugăm o tranziție pentru schimbarea culorii butonului */
+}
+
+.play-button:hover {
+    background-color: #ff5656; /* Schimbăm culoarea butonului la hover */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 350px;
+    position: relative; /* Adăugăm position: relative pentru a poziționa absolut .card-title */
+    transition: transform 0.15s ease-out;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.05); /* Reducem scala imaginii atunci când mouse-ul este deasupra cardului */
+}
+
+.card-title {
+    font-size: 1.15rem;
+    margin-bottom: 10px;
+    color: white !important;
+    position: absolute; /* Setăm poziția absolută pentru .card-title */
+    bottom: 5px; /* Plasăm .card-title în partea de jos a div-ului .card */
+    left: 0; /* Îl plasăm la stânga div-ului .card */
+    padding: 10px; /* Adăugăm puțin padding pentru a îmbunătăți aspectul */
+    border-radius: 0 0 8px 8px; /* Rotunjim doar colțurile de jos */
+    width: 100%; /* Asigurăm că ocupă întreaga lățime a .card */
+    box-sizing: border-box; /* Includem padding-ul în lățimea totală */
+}
+
+.card:hover .card-title {
+    color: #ff5656 !important; /* La hover, textul devine albastru */
+}
+
+.btn-primary {
+    background-color: rgba(31, 31, 31, 0.75) !important;
+    border: 1px solid rgba(33, 33, 33, 0.6) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+
+.btn-primary:hover {
+    background-color: #ff0a16;
+    border-color: #ff0a16;
+}
+
+.text-recente {
+    margin-left: 15%;
+    text-transform: uppercase!important;
+    font-size: 32px;
+    color: white !important;
+}
+
+.text-uppercase {
+    text-transform: uppercase!important;
+    margin-top: 40px;
+    font-size: 32px;
+    color: white !important;
+}
+
+.text-titlu {
+    margin-top: 40px;
+    font-size: 32px;
+    color: white !important;
+    border-bottom: 1px solid #2c2c2c;
+}
+
+.text-description{
+    margin-top: 5px;
+    font-size: 26px;
+    font-family: Poppins, sans-serif;
+    font-style: italic;
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.mb-4{
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+label{
+    color: white;
+}
+
+.modal-content{
+    background-color: #1e1e1e !important;
+    color: white !important;
+}
+
+.episode-badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 5px 10px;
+    background-color: #c95b5b; /* Culoarea de fundal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: #fff; /* Culoarea textului */
+    font-size: 14px;
+    border-radius: 25px 0px 25px 10px;
+    margin: 10px; /* Spațiere între badge și conținutul cardului */
+}
+/* Stilizare suplimentară */
+.team-member {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.team-member img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+.team-member h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: white !important;
+}
+.team-member p {
+    font-style: italic;
+    color: #666;
+}
+
+.top-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #1c1c1c;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    z-index: 10;
+}
+
+.custom-pagination {
+    justify-content: center;
+}
+
+.custom-pagination .page-link {
+    color: #fff;
+    background-color: #1c1c1c;
+    border-color: #3b3b3b;
+}
+
+.custom-pagination .page-link:hover {
+    background-color: #1c1c1c;
+    border-color: #0e121c;
+}
+
+.custom-pagination .page-item.active .page-link {
+    background-color: #181818;
+    border-color: #0e121c;
+}
+
+.carousel-navigation {
+    position: relative;
+    width: 100%;
+    margin-top: -40px; /* Ajustează marginea pentru a alinia butoanele cu slide-urile */
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-300%);
+    width: 50px;
+    height: 50px;
+    background-color: #c95b5b;
+    border-radius: 50%;
+    z-index: 9999;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.prev-btn span,
+.next-btn span {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: #c95b5b;
+    transition: color 0.3s;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+    background-color: #c95b5b;
+}
+
+.prev-btn:hover span,
+.next-btn:hover span {
+    color: #ffffff;
+}
+
+.prev-btn {
+    left: -60px; /* Ajustează distanța de la marginea stângă */
+}
+
+.next-btn {
+    right: -60px; /* Ajustează distanța de la marginea dreaptă */
+}
+
+/* acelele */
+
+.seriale-prev-btn,
+.seriale-next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-300%);
+    width: 50px;
+    height: 50px;
+    background-color: #c95b5b;
+    border-radius: 50%;
+    z-index: 9999;
+    border: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.seriale-prev-btn span,
+.seriale-next-btn span {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: #c95b5b;
+    transition: color 0.3s;
+}
+
+.seriale-prev-btn:hover,
+.seriale-next-btn:hover {
+    background-color: #c95b5b;
+}
+
+.seriale-prev-btn:hover span,
+.seriale-next-btn:hover span {
+    color: #ffffff;
+}
+
+.seriale-prev-btn {
+    left: -60px; /* Ajustează distanța de la marginea stângă */
+}
+
+.seriale-next-btn {
+    right: -60px; /* Ajustează distanța de la marginea dreaptă */
+}
+
+footer {
+    margin-top: 30px;
+    height: 100px;
+    color: #fff;
+    padding: 20px 0;
+}
+
+/* Stilurile pentru iframe responsive */
+.responsive-iframe-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 56.25%; /* Aspect ratio 16:9 (înălțime/lățime) */
+}
+
+.responsive-iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+/* Stiluri pentru dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-logout {
+    background-color: rgba(72, 72, 72, 0.6);
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+.profile-info {
+    background-color: #282828;
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+}
+
+ul.xo-tab-links {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+ul.xo-tab-links li {
+    background: none;
+    color: #ffffff;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition:all linear 0.15s;
+}
+
+ul.xo-tab-links li.current {
+    background-image: linear-gradient(to right top, #232323, #242424, #252525, #262626, #272727);
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.xo-tab-content {
+    display: none;
+    background: #19191957;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.xo-tab-content.current {
+    display: inherit;
+}
+
+
+.anime-info {
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #e1e1e1;
+}
+
+.anime-image {
+    flex: 0 0 200px;
+}
+
+.anime-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.anime-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.anime-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.anime-meta p {
+    margin-bottom: 5px;
+}
+
+.anime-synopsis {
+    font-family: "Poppins", sans-serif;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    color: #e1e1e1;
+}
+
+.anime-synopsis strong {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.anime-meta p:not(:last-child)::after,
+.anime-synopsis p:not(:last-child)::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background-color: #ccc;
+    margin-top: 5px;
+}
+
+.anime-episodes {
+    margin-top: 20px;
+    color: white;
+}
+
+.anime-episodes h4 {
+    margin-bottom: 10px;
+}
+
+.episode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+}
+
+.episode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #171717;
+    border: 1px solid #818181;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    color: #e1e1e1;
+}
+
+.episode-number {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.episode-title {
+    margin-top: 5px;
+}
+
+.alaws321 {
+    overflow: hidden
+}
+
+.alaws321 .alaws-apb {
+    font-size: 14px;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+    font-family: "Courgette", cursive !important;
+}
+
+.alaws321 .alaws-apb a {
+    line-height: 30px;
+    width: 3.704%;
+    color: #FFFFFF;
+    background: #424242;
+    transition: all 0.25s;
+    text-align: center;
+    float: left
+}
+
+.alaws321 .alaws-apb a:hover {
+    text-decoration: none;
+    background: #2977BE;
+    color: #FFFFFF
+}
+
+.alaws321 .alaws-wrap {
+    margin-top: 5px
+}
+
+.alaws321 .alaws-group {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px
+}
+
+.alaws321 .alaws-head {
+    font-weight: 700;
+    border-bottom: 2px solid #262626;
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+}
+
+.alaws321 .alaws-head a {
+    color: #fff
+}
+
+.alaws321 .alaws-item {
+    float: left;
+    width: 40%;
+}
+
+.alaws321 .alaws-title {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.alaws321 .alaws-title a {
+    font-family: "Poppins", sans-serif !important;
+    line-height: 24px;
+    font-size: 18px;
+    color: #fff !important;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .alaws321 .alaws-item {
+        width: 50%
+    }
+}
+
+@media screen and (max-width:480px) {
+    .alaws321 .alaws-item {
+        width: 100%
+    }
+
+    .alaws321 .alaws-apb a {
+        margin: 1px;
+        width: 10.43%
+    }
+}
+
+@media screen and (max-width:320px) {
+    .alaws321 .alaws-apb a {
+        width: 10.24%
+    }
+}
+
+.img-register{
+    width: 140px;
+    height: 180px;
+    border-radius: 20px;
+}
+
+.search-results {
+    position: absolute;
+    width: 188px;
+    background-color: #42424285;
+    border-radius: 0px 20px 0px 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 40px;
+}
+
+.post-result {
+    padding: 10px;
+    border-bottom: 1px solid #2a2a2a;
+    cursor: pointer;
+}
+
+.post-result img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+.comment {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.comment .meta {
+    background: linear-gradient(to right, #ef5350, #f48fb1, #7e57c2, #2196f3, #26c6da, #43a047, #eeff41, #f9a825, #ff5722);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.2rem;
+}
+
+.comment .content {
+    margin-top: 10px;
+    color: white;
+}
+
+.comment .actions {
+    margin-top: 15px;
+}
+
+.comment .actions a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+.comment .profile-image-com {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.episode-buttons {
+    margin-top: 20px;
+    text-align: center; /* Aliniere butoane în mijloc */
+}
+
+.button-prev,
+.button-next,
+.button-all {
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 0 5px; /* Spațiere între butoane */
+}
+
+.button-all {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button-prev {
+    background-color: #212121;
+    color: #fff;
+}
+
+.button-next {
+    background-color: #212121;
+    color: #fff;
+}
+
+.button-all {
+    background-color: #484848;
+    color: #fff;
+}
+
+.button-prev:hover,
+.button-next:hover,
+.button-all:hover {
+    opacity: 0.8;
+}
